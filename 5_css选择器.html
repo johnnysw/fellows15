@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--<link rel="stylesheet" href="selector.css">-->
     <style>
         #aa{
             background: red;
@@ -11,6 +12,10 @@
         }
         .bb{
             color: green;
+            background: #0000ff;
+        }
+        .cc{
+            background: #ff0000;
         }
         #div1 h1{
             color: blue;
@@ -18,15 +23,17 @@
         #aa:hover{
             color: yellow;
         }
-
     </style>
 </head>
 <body>
-    <h1 id="aa">这是一个标题</h1>
-    <h1 class="bb">这是标题2</h1>
+    <h1 id="aa" class="bb cc dd" style="background: #0f0;">这是一个标题</h1>
+    <h1 class="bb cc">这是标题2</h1>
     <h1 class="bb">这是标题3</h1>
     <div id="div1">
         <h1>这是标题4</h1>
+        <div>
+            <h1>hehe</h1>
+        </div>
     </div>
 
     <a href="www.qq.com">qq</a>
