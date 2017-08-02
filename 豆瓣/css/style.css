@@ -19,12 +19,41 @@ body{
 }
 .wrap{
     width: 950px;
-    background: #ffff00;
     margin: 0 auto;
+    position: relative;
 }
 /*nav 开始*/
 #nav{
     height: 84px;
     background: #cccccc;
+}
+#logo{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -17px;
+}
+#search-box{
+    border: 1px solid #c3c3c3;
+    height: 30px;
+    position: absolute;
+    left: 180px;
+    top: 50%;
+    margin-top: -15px;
+}
+#ipt-search{
+    width: 240px;
+    height: 20px;
+    font-size: 13px;
+    padding: 5px;
+    border: 0;
+    float: left;
+}
+#btn-search{
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: url("../img/btn_search_bg.png") no-repeat center center;
+    float: left;
 }
 /*nav 结束*/
