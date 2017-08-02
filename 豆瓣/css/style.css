@@ -25,7 +25,6 @@ body{
 /*nav 开始*/
 #nav{
     height: 84px;
-    background: #cccccc;
 }
 #logo{
     position: absolute;
@@ -55,6 +54,69 @@ body{
     border: 0;
     background: url("../img/btn_search_bg.png") no-repeat center center;
     float: left;
-
+}
+#nav-menu{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+}
+#nav-menu li{
+    float: left;
+    margin-left: 17px;
+}
+#nav-menu a{
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: url("../img/nav-menu.png") no-repeat;
+    text-indent: -9999px;
+}
+#nav-menu .read{
+    background-position: 0 0;
+}
+#nav-menu .movie{
+    background-position: -60px 0;
+}
+#nav-menu .music{
+    background-position: -120px 0;
+}
+#nav-menu .group{
+    background-position: -180px 0;
+}
+#nav-menu .city{
+    background-position: -240px 0;
+}
+#nav-menu .fm{
+    background-position: -300px 0;
+}
+#nav-menu .time{
+    background-position: -360px 0;
+}
+#nav-menu .market{
+    background-position: -420px 0;
 }
 /*nav 结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
