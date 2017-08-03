@@ -13,9 +13,13 @@ img{
 ul, ol{
     list-style: none;
 }
+input{
+    outline: none;
+}
 /*css reset 结束*/
 body{
     background: #ffffff;
+    font-size: 12px;
 }
 .wrap{
     width: 950px;
