@@ -50,7 +50,7 @@
                 </p>
                 <p>
                     <input type="submit" class="btn login" value="登录豆瓣">
-                    <input type="button" class="btn register" value="注册账号">
+                    <input id="btn-register" type="button" class="btn register" value="注册账号">
                 </p>
                 <div>
                     <input type="checkbox" class="remember-me">记住我
@@ -62,11 +62,46 @@
             </form>
         </div>
     </div>
-
+    <div class="mask" id="mask"></div>
+    <div class="dialog" id="dialog"></div>
     <!--解决IE6不支持PNG透明问题-->
     <script src="js/DD_belatedPNG_0.0.8a.js"></script>
     <script>
         DD_belatedPNG.fix('*');
+    </script>
+    <script>
+
+        var btn = document.getElementById('btn-register');
+        var mask = document.getElementById('mask');
+        var dialog = document.getElementById('dialog');
+        btn.onclick = function () {
+            mask.style.display = 'block';
+            dialog.style.display = 'block';
+        };
+        mask.onclick = function () {
+            mask.style.display = 'none';
+            dialog.style.display = 'none';
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            background: #ff0000;
+        }
+        /*html, body{
+            width: 100%;
+            height: 100%;
+        }*/
+        .mask{
+            width: 100%;
+            height: 100%;
+            /*background: rgba(0,0,0,0.6);*/
+            background: #000000;
+            opacity: 0.6;
+            filter: alpha(opacity:60);
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        .dialog{
+            width: 400px;
+            height: 300px;
+            background: #fff;
+            position: absolute;
+            left: 50%;
+            margin-left: -200px;
+            top: 50%;
+            margin-top: -150px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>haha</h1>
+    <div class="mask"></div>
+    <div class="dialog">
+        123456789
+    </div>
+
+</body>
+</html>
