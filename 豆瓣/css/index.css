@@ -49,14 +49,15 @@
     right: 0;
 }
 #banner .login-form p{
-    border: 1px solid #DBE5DB;
     height: 32px;
+    /*line-height: 32px;*/
     margin: 5px auto;
 }
 #banner .email, #banner .password{
     border: 0;
     width: 100%;
     height: 32px;
+    line-height: 32px;
     text-indent: 7px;
 }
 #banner .password{
@@ -68,15 +69,45 @@
     background: #ffffff;
 }*/
 #banner .login-form .bg-fff{
+    border: 1px solid #DBE5DB;
     background: #ffffff;
 }
-#banner .login-form input[type=submit]{
-    width: 134px;
-    background: #2a8c70;
+.btn{
+    width: 132px;
     border: 0;
     color: #fff;
     padding: 7px 0;
     border-radius: 2px;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.8;
+    filter: alpha(opacity:80);
+}
+.btn.login{
+    background: #2a8c70;
+}
+.btn.register{
+    border: 1px solid #2a8c70;
+    color: #2a8c70;
+    background: #edf4ed;
+    padding: 6px 0;
+}
+#banner .other-login{
+    float: right;
+}
+#banner .other-login li{
+    float: left;
+    width: 14px;
+    height: 12px;
+    margin-right: 5px;
+}
+#banner .other-login img{
+    width: 14px;
+    height: 12px;
+}
+#banner .remember-me{
+    float: left;
 }
 /*banner 结束*/
 
