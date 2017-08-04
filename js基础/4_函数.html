@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //形参
+    //arguments是函数中的一个数组，用来引用所有的实参
+    /*function sayHello(name, age){
+        alert(name + ' say hello! my age is ' + age + ' my sex is ' + arguments[0]);
+    }
+
+    //实参
+    sayHello('zhangsan', 23, '男');*/
+
+    /*function add(a, b) {
+        var c = a + b;
+        return c;
+    }
+
+//    add(3, 4);
+
+    var d = add(3, 4);
+
+    console.log(d);*/
+
+    //函数式编程
+
+    /*function test() {
+
+    }
+
+    var test = function(){
+
+    };*/
+
+//    var test = new Function();
+
+    /*var a = function () {
+        alert('haha');
+    };
+
+    function test(b) {
+       b();
+    }
+
+    test(a);*/
+
+
+    function test(a) {
+        a(function (c) {
+            c('hoho');
+        });
+    }
+
+    test(function(b){
+        b(function (d) {
+            alert(d);
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*var obj = new Object();
+    obj.name = 'zhangsan';
+    obj.age = 23;
+    obj.sayHello = function () {
+      alert(this.name);//this指向当前对象
+    };*/
+
+    var obj = {//对象直接量
+        name: 'zhangsan',
+        age: 23,
+        sayHello: function () {
+            alert(this.name);
+        }
+    };
+
+    obj.sayHello();
+</script>
+</body>
+</html>
