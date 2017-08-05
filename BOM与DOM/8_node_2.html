@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">添加</button>
+<button id="btn2">删除</button>
+<button id="btn3">替换</button>
+<ul id="ul1">
+    <li>item 1</li>
+    <li>item 2</li>
+</ul>
+<script>
+    var oBtn = document.getElementById('btn');
+    var oBtn2 = document.getElementById('btn2');
+    var oBtn3 = document.getElementById('btn3');
+    var oUl1 = document.getElementById('ul1');
+    oBtn.onclick = function () {
+        var oLi = document.createElement('li');
+        oLi.innerHTML = Math.random();
+//        oUl1.appendChild(oLi);
+        oUl1.insertBefore(oLi, oUl1.children[1]);
+    };
+    oBtn2.onclick = function () {
+        oUl1.removeChild(oUl1.lastChild);
+    };
+    oBtn3.onclick = function () {
+        var oLi = document.createElement('li');
+        oLi.innerHTML = Math.random();
+        oUl1.replaceChild(oLi, oUl1.children[1]);
+    };
+</script>
+</body>
+</html>

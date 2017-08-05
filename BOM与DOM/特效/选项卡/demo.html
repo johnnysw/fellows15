@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        #tabs{
+            overflow: hidden;
+        }
+        #tabs li{
+            width: 120px;
+            height: 30px;
+            background: #cccccc;
+            float: left;
+            margin-right: 5px;
+            text-align: center;
+        }
+        #tabs .selected{
+            background: #000000;
+            color: #ffffff;
+        }
+        #content{
+            height: 270px;
+            border-top: 1px solid #000;
+            background: #cccccc;
+        }
+        #content > div{
+            display: none;
+        }
+        #content .selected{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="tabs">
+            <li class="selected">js</li>
+            <li>html</li>
+            <li>css</li>
+        </ul>
+        <div id="content">
+            <div class="selected">js...</div>
+            <div>
+                <div>html...</div>
+            </div>
+            <div>css...</div>
+        </div>
+    </div>
+    <script>
+        var oTabs = document.getElementById('tabs');
+        var oContent = document.getElementById('content');
+        var aLi = oTabs.getElementsByTagName('li');
+        //var aDiv = oContent.getElementsByTagName('div');
+        var aDiv = oContent.children;
+
+        for(var i=0; i<aLi.length; i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function () {
+                for(var i=0; i<aLi.length; i++){
+                    aLi[i].className = '';
+                    aDiv[i].className = '';
+                }
+                this.className = 'selected';
+                aDiv[this.index].className = 'selected';
+            };
+        }
+    </script>
+</body>
+</html>
