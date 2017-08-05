@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">
+        <h1 id="h1">haha</h1>
+        <p>hehe</p>
+    </div>
+    <script>
+        var oDiv = document.getElementById('div1');
+        var oH1 = document.getElementById('h1');
+//        console.log(  oDiv.childNodes  );
+//        console.log(  oDiv.children  );
+//        console.log(  oDiv.firstChild  );
+//        console.log(  oDiv.firstElementChild  );
+//        console.log(  oH1.nextSibling.innerHTML  );
+//        console.log(  oH1.nextElementSibling  );
+
+        /*function first(elem) {
+            elem = elem.firstChild;
+            return elem.nodeType == 1?elem:next(elem);
+        }
+        function last(elem) {
+            
+        }
+
+        console.log(  first(oDiv)  );
+
+
+        function next(elem) {
+            do{
+                elem = elem.nextSibling;
+            }while( elem && elem.nodeType != 1  );
+            return elem;
+        }
+
+        function prev(elem) {
+            
+        }*/
+
+//        console.log( next(oH1) );
+
+            console.log(oH1.parentNode);
+
+//        console.log(  oDiv.getAttributeNode('id').nodeType  );
+//        console.log(  oDiv.childNodes[0].nodeType  );
+    </script>
+</body>
+</html>
