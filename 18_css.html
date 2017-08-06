@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #ul1{
+            /*height: 110px;*/
+            /*overflow: hidden;*/
+            /*float: left;*/
+            /*position: absolute;*/
+        }
+        #ul1 li{
+            float: left;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            text-align: center;
+            line-height: 200px;
+        }
+        #div1 span{
+            background: #00ff00;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #999999;
+            /*overflow: hidden;*/
+            position: relative;
+        }
+        #div3{
+            width: 50px;
+            height: 50px;
+            background: #ffff00;
+            /*margin: 75px auto;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -25px;
+        }
+    </style>
+</head>
+<body>
+<!--<ul id="ul1">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+    <li>005</li>
+</ul>-->
+
+<div id="div1">
+    <span>span</span>
+</div>
+<div id="div2">
+    <div id="div3"></div>
+</div>
+
+
+<!--
+css选择器：
+1、id选择器   #id
+2、类选择器   .class
+3、标签/元素选择器  div{}  h1{}
+4、后代选择器  #div1 h1{}
+5、子代选择器  #div1 > h1{}
+6、分组选择器  h1, p{}
+7、伪类选择器  #div1:hover{}
+
+
+-->
+</body>
+</html>

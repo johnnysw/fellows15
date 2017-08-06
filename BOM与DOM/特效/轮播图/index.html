@@ -88,6 +88,7 @@
         var aLi = oTabs.children;
         var aImgs = oImgs.children;
         var oNext = document.getElementById('next');
+        var oPrev = document.getElementById("prev");
 
         var index = 0;//代表当前正在显示的图片的索引
 
@@ -112,6 +113,13 @@
             index++;
             if(index == aLi.length){
                 index = 0;
+            }
+            changImg(aLi[index]);
+        };
+        oPrev.onclick = function(){
+            index--;
+            if(index == -1){
+                index = aLi.length - 1;
             }
             changImg(aLi[index]);
         };
