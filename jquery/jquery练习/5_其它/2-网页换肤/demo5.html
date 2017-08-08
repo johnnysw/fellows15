@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-    <title></title>
+	<title></title>
 	<link href="css/default.css" rel="stylesheet" type="text/css" />
-    <link href="css/skin_0.css" rel="stylesheet" type="text/css" id="cssfile" />
-    <!--   ÒıÈëjQuery -->
-	<script src="../../../jquery.min.js" type="text/javascript"></script>
-	<!--   ÒıÈëjQueryµÄcookie²å¼ş -->
+	<link href="css/skin_0.css" rel="stylesheet" type="text/css" id="cssfile" />
+	<!--   å¼•å…¥jQuery -->
+	<script src="../../../jquery-1.12.4.js" type="text/javascript"></script>
+	<!--   å¼•å…¥jQueryçš„cookieæ’ä»¶ -->
 	<script src="js/jquery.cookie.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		//<![CDATA[
@@ -21,35 +21,35 @@
 			}
 		});
 		function switchSkin(skinName){
-				 $("#"+skinName).addClass("selected")                 //µ±Ç°<li>ÔªËØÑ¡ÖĞ
-							  .siblings().removeClass("selected");  //È¥µôÆäËüÍ¬±²<li>ÔªËØµÄÑ¡ÖĞ
-				$("#cssfile").attr("href","css/"+ skinName +".css"); //ÉèÖÃ²»Í¬Æ¤·ô
-				$.cookie( "MyCssSkin" ,  skinName , { path: '/', expires: 10 });
+			$("#"+skinName).addClass("selected")                 //å½“å‰<li>å…ƒç´ é€‰ä¸­
+					.siblings().removeClass("selected");  //å»æ‰å…¶å®ƒåŒè¾ˆ<li>å…ƒç´ çš„é€‰ä¸­
+			$("#cssfile").attr("href","css/"+ skinName +".css"); //è®¾ç½®ä¸åŒçš®è‚¤
+			$.cookie( "MyCssSkin" ,  skinName , { path: '/', expires: 10 });
 		}
 		//]]>
 	</script>
 </head>
 <body>
-    <ul id="skin">
-		<li id="skin_0" title="»ÒÉ«" class="selected">»ÒÉ«</li>
-		<li id="skin_1" title="×ÏÉ«">×ÏÉ«</li>
-		<li id="skin_2" title="ºìÉ«">ºìÉ«</li>
-		<li id="skin_3" title="ÌìÀ¶É«">ÌìÀ¶É«</li>
-		<li id="skin_4" title="³ÈÉ«">³ÈÉ«</li>
-		<li id="skin_5" title="µ­ÂÌÉ«">µ­ÂÌÉ«</li>
-	</ul>
+<ul id="skin">
+	<li id="skin_0" title="ç°è‰²" class="selected">ç°è‰²</li>
+	<li id="skin_1" title="ç´«è‰²">ç´«è‰²</li>
+	<li id="skin_2" title="çº¢è‰²">çº¢è‰²</li>
+	<li id="skin_3" title="å¤©è“è‰²">å¤©è“è‰²</li>
+	<li id="skin_4" title="æ©™è‰²">æ©™è‰²</li>
+	<li id="skin_5" title="æ·¡ç»¿è‰²">æ·¡ç»¿è‰²</li>
+</ul>
 
-    <div id="div_side_0">
-		<div id="news">
-		    <h1 class="title">Ê±ÊÂĞÂÎÅ</h1>
-		</div>
-    </div>
+<div id="div_side_0">
+	<div id="news">
+		<h1 class="title">æ—¶äº‹æ–°é—»</h1>
+	</div>
+</div>
 
-    <div id="div_side_1">
-		<div id="game">
-			<h1 class="title">ÓéÀÖĞÂÎÅ</h1>
-		</div>
-    </div>
-    <p>ËµÃ÷£º±¾ÀıĞèÊ¹ÓÃFirefox²ÅÄÜ¿´µ½Ğ§¹û£¬chromeÓÉÓÚ°²È«ĞÔÏŞÖÆ²»ÔÊĞíÖ±½ÓĞŞ¸Äcookie</p>
+<div id="div_side_1">
+	<div id="game">
+		<h1 class="title">å¨±ä¹æ–°é—»</h1>
+	</div>
+</div>
+<p>è¯´æ˜ï¼šæœ¬ä¾‹éœ€ä½¿ç”¨Firefoxæ‰èƒ½çœ‹åˆ°æ•ˆæœï¼Œchromeç”±äºå®‰å…¨æ€§é™åˆ¶ä¸å…è®¸ç›´æ¥ä¿®æ”¹cookie</p>
 </body>
 </html>
