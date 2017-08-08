@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        #div2{
+            width: 400px;
+            height: 400px;
+            background: #00ff00;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div2">
+        <div id="div1">div1111</div>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            var $div1 = $("#div1");
+            /*console.log("width=" + $div1.width());
+            console.log("innerWidth=" + $div1.innerWidth());
+            console.log("outerWidth=" + $div1.outerWidth(true));*/
+            /*console.log($div1.offset());
+            console.log($div1.position());
+            console.log($div1.offsetParent());*/
+            var $h1 = $("<h1>hhh</h1>");
+//            $div1.append($h1);
+//            $h1.appendTo($div1);
+//            $div1.prepend($h1);
+//            $h1.prependTo($div1);
+//            console.log($div1.html());
+//            console.log($div1.text());
+            $div1.html("<h1>h1h1h1</h1>");
+//            $div1.text("<h1>h1h1h1</h1>");
+//            $div1.text("asdfasd");
+//            $div1.empty();
+            $div1.remove();
+        });
+    </script>
+</body>
+</html>
