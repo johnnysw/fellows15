@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        img{
+            border: 0;
+        }
+        #container{
+            width: 680px;
+            height: 344px;
+            position: relative;
+            margin: 100px auto;
+        }
+        #imgs img{
+            display: none;
+        }
+        #imgs .selected{
+            display: block;
+        }
+        #nav{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        #nav li, #arrows span{
+            width: 20px;
+            height: 20px;
+            background: #000000;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            float: left;
+            margin-right: 5px;
+        }
+        #nav .selected{
+            background: orange;
+        }
+        #arrows{
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="imgs">
+            <img src="img/1.jpg" alt="" class="selected">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+        </div>
+        <ul id="nav">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <div id="arrows">
+            <span id="prev">&lt;</span>
+            <span id="next">&gt;</span>
+        </div>
+    </div>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            var nowIndex = 0;//当前显示的下标
+            var timer;
+            var $lis = $("#nav li");
+            $lis.on("mouseover", function(){
+                nowIndex = $(this).index();
+                changeImg();
+            });
+            $("#prev").on("click", function(){
+                nowIndex--;
+                if(nowIndex == -1){
+                    nowIndex = $lis.length - 1;
+                }
+                changeImg();
+            });
+            $("#next").on("click", function(){
+                nowIndex++;
+                if(nowIndex == $lis.length){
+                    nowIndex = 0;
+                }
+                changeImg();
+            });
+            play();
+
+            $("#container").hover(function(){
+                clearInterval(timer);
+            }, function(){
+                play();
+            });
+
+            function play(){
+                timer = setInterval(function(){
+                    $("#next").trigger("click");
+                }, 1000);
+            }
+            function changeImg(){
+                $lis.eq(nowIndex).addClass("selected").siblings().removeClass("selected");
+                $("#imgs img").eq(nowIndex).addClass("selected").siblings().removeClass("selected");
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
