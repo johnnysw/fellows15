@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+    <div id="div1">
+        div1
+        <h1>hhhh</h1>
+    </div>
+    <div id="div2">div2</div>
+
+
+    <div id="div3">
+        div3
+        <div id="div4" class="aa">
+            div4
+            <div id="div5" class="aa">
+                div5
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            var $lis = $("#ul1 li");
+            /*$lis.eq(-1).css({
+                background : "#f00"
+            });*/
+//            $lis.filter(":eq(0)").css({
+//                background : "#f00"
+//            });
+            /*$lis.last().css({
+                background : "#f00"
+            });*/
+            /*$("#div1").add($("#div2")).css({
+                background : "#f00"
+            });*/
+
+//            console.log($("#div1").contents());
+           /* $lis.each(function(index, elem  ){
+                console.log(elem);
+            });*/
+/*            for(var i=0; i<$lis.size(); i++){
+                console.log($lis[i]);
+            }*/
+            /*$("#div5").css({
+                background : "#0f0"
+            });
+            $("#div3").children(".aa").css({
+                background : "#f00"
+            });*/
+            //children:子代
+            //find：后代
+           /* $("#div5").css({
+                background : "#0f0"
+            });*/
+            /*$("#div3").children(".aa").css({
+                background : "#f00"
+            }).end().on("click", function(){
+                alert(123);
+            });*/
+
+           /* $("#div3").children(".aa").children(".aa").css({
+                background : "#f00"
+            }).end().end().css({
+                background : "#0f0"
+
+            });*/
+
+
+
+        });
+    </script>
+</body>
+</html>
