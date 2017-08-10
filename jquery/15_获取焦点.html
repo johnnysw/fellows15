@@ -56,15 +56,18 @@
 //            this.style.background = "red";
             $(this).addClass("focus");
 //            $(this).val("");
-            this.value = "";
-
+            if(this.value == this.defaultValue){
+                this.value = "";
+            }
 
         }).on("blur", function(){
 //            $(this).css("background", "transparent");
             $(this).removeClass("focus");
 //            this.style.background = "transparent"
 
-            this.value = this.defaultValue;
+            if(this.value == ""){
+                this.value = this.defaultValue;
+            }
 //            $(this).val("123");
         });
 
