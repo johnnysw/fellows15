@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*var date = new Date();
+    date.setDate(date.getDate() + 7);
+    document.cookie = "age=20;expires=" + date.toUTCString();
+    document.cookie = "name=lisi";*/
+    /*document.cookie = "name=lisi";
+
+    console.log(document.cookie);*/
+
+
+    addCookie("school", "heida", 30);
+    addCookie("school", "linda", 30);
+    //expires表示过期的天数
+    function addCookie(key, val, expires){
+        var str = key + "=" + val;
+        if(expires != undefined){
+            var date = new Date();
+            date.setDate(date.getDate() + expires);
+            str += ";expires=" + date.toUTCString();
+        }
+        document.cookie = str;
+    }
+    function getCookie(key){
+        var cookie = document.cookie;
+        var aCookie = cookie.split(";")
+        for(var i=0; i<aCookie.length; i++){
+            var arr = aCookie[i].split("=");
+            if(arr[0].trim() == key){
+                return arr[1];
+            }
+        }
+    }
+    function delCookie(key){
+        addCookie(key, "", -100);
+    }
+
+
+
+</script>
+</body>
+</html>
