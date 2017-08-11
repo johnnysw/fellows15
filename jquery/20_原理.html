@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1"></div>
+<div class="aa"></div>
+<div class="aa"></div>
+
+<script>
+    $(function () {
+        console.log($("#div1"));
+        console.log($(".aa"));
+    });
+
+
+    function $(selector, context) {
+        if (typeof selector == "string") {
+            var elements = [];
+            if (selector.charAt(0) == "#") {
+                elements.push(document.getElementById(selector.substring(1)));
+            } else if (selector.charAt(0) == ".") {
+                elements = getByClass(selector.substring(1), context);
+            }
+            return elements;
+        } else if (typeof selector == "function") {
+            addEvent(window, "load", selector);
+        }
+    }
+
+
+
+    /**
+     * 用来根据class查找元素
+     * @param className 要查找的class名称
+     * @param context 要搜索的范围
+     * @return {Array}
+     */
+    function getByClass(className, context) {
+        context = context || document;
+        if (context.getElementsByClassName) {
+            return context.getElementsByClassName(className);
+        } else {
+            var result = [];
+            var arr = context.getElementsByTagName('*');
+            for (var i = 0; i < arr.length; i++) {
+                //arr[i].className = "aa bb"
+                if (arr[i].className.indexOf(className) != -1) {
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+    }
+
+    /*
+     * elem:绑定事件的对象
+     * type:绑定事件的类型
+     * handler:事件的处理方法
+     * */
+    function addEvent(elem, type, handler) {
+        if (elem.addEventListener) {
+            elem.addEventListener(type, handler);
+        } else if (elem.attachEvent) {
+            elem.attachEvent("on" + type, handler);
+        } else {
+            elem["on" + type] = handler;
+        }
+    }
+
+</script>
+</body>
+</html>
