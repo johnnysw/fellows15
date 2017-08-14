@@ -32,6 +32,18 @@ $(function(){
         $("#JS_imgWrap img").eq($(this).index()).stop().fadeIn().siblings().stop().fadeOut();
     });
 
+    //tooltip
+    tooltip("#jnNoticeInfo .tooltip");
+    tooltip("#jnCatalog a");
+
+    //轮播图
+    $("#jnBrandTab li").on("click", function(){
+        $(this).addClass("chos").siblings().removeClass("chos");
+        $("#jnBrandList").stop().animate({
+            left: -$("#jnBrandList li").innerWidth() * 4 * $(this).index()
+        }, 1000);
+    });
+
 
 
 });
