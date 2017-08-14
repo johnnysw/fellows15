@@ -641,7 +641,7 @@ ul.rating li.five a:hover {background-position:0 -160px}
 	background:#f7f5d1;
 	padding:1px;
 	color:#333;
-	display:none;
+	/*display:none;*/
 }
 /* imgHover */
 .imageMask{
