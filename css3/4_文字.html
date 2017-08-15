@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            -webkit-text-shadow: 10px 10px 2px rgba(255, 0, 0, 0.5);
+            -moz-text-shadow: 10px 10px 2px rgba(255, 0, 0, 0.5);
+            -ms-text-shadow: 10px 10px 2px rgba(255, 0, 0, 0.5);
+            -o-text-shadow: 10px 10px 2px rgba(255, 0, 0, 0.5);
+            text-shadow: 10px 10px 2px rgba(255, 0, 0, 0.5);
+        }
+        #div2{
+            width: 200px;
+            border: 1px solid;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #div3{
+            width: 200px;
+            border: 1px solid;
+            word-break: break-all;
+            font-family: 'Serendity Script';
+        }
+        @font-face {
+            font-family: 'Serendity Script';
+            src: url('Serendipity Script/Serendity Script.eot'); /* IE9+ */
+            src: url('Serendipity Script/Serendity Script.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('Serendipity Script/Serendity Script.woff') format('woff'), /* chrome、firefox */
+            url('Serendipity Script/Serendity Script.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('Serendipity Script/Serendity Script.svg#fontname') format('svg'); /* iOS 4.1- */
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">abcdefg</div>
+    <div id="div2">
+        阿什顿发的阿什顿发是否萨芬暗室逢灯安防撒地方阿什顿发阿什顿发撒地方安防撒地方打分安防大师傅
+        <!--asdf asf asdf asdfa sfsafa sdfas dfa sfasd fa sfasfa sdfs adf asfas-->
+    </div>
+    <div id="div3">
+        asdfasfasdfdsafasfasdfasfdsafasfasdfasfasdfsd
+        啊啊啊
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*#div1::before{
+            content: 'aa';
+            background: #ff0000;
+            width: 200px;
+            height: 200px;
+            display: block;
+        }*/
+        #ul1{
+            /*height: 30px;*/
+            /*overflow: hidden;*/
+            /*float: left;*/
+            /*position: absolute;*/
+        }
+        #ul1 li{
+            float: left;
+        }
+        #div1::after{
+            content: "<h1>hhh</h1>";
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">div</div>
+
+    <ul id="ul1" class="clearfix">
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+    </ul>
+    <h1>hhhh</h1>
+</body>
+</html>

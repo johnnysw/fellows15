@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        /*.bb{
+            background: #00ff00;
+        }
+        .aa{
+            background: #ff0000;
+        }*/
+        /*#ul1 li.aa~li{
+            background: #ff0000;
+        }
+
+        ul[id='ul1']{
+            background: #00ff00;
+        }
+        #ipt1{
+            background: #00ff00;
+        }
+        #ipt1:focus{
+            background: #ff0000;
+        }*/
+        /*#ul1 li:not(.aa){
+            background: #ff0000;
+        }*/
+        /*#ul1 li:only-child{
+            background: #ff0000;
+        }*/
+        #ul1 li:nth-last-child(2){
+            background: #ff0000;
+        }
+        p:only-of-type{
+            color: #f00;
+        }
+        p:only-child{
+
+        }
+        #div2{
+            width: 100px;
+            border: 1px solid;
+        }
+        /*#div2::first-line:hover{
+            background: #ff0000;
+        }*/
+        /*#div2:hover::first-line{
+            background: #ff0000;
+        }*/
+        /*#div2:first-letter{
+            font-size: 50px;
+        }*/
+        #div2::selection{
+            background: #ff0000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div class="aa bb">divdiv</div>
+
+    <ul id="ul1">
+        <li>001</li>
+        <li class="aa">002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+    <input type="text" id="ipt1" value="123">
+
+    <div class="test">
+        <div>我是一个div元素</div>
+        <p>我是一个p元素</p>
+        <p>我是一个p元素</p>
+    </div>
+    <div class="test">
+        <div>divdivdvi</div>
+        <p>pppppp</p>
+    </div>
+
+
+    <div id="div2">
+        按时发顺丰按时发顺丰阿斯顿发斯蒂芬阿斯顿发生发生的发生大时代发顺丰
+    </div>
+
+</body>
+</html>
