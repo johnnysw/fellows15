@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            border: 1px dashed;
+            margin: 200px auto;
+
+            /*perspective: 1000px;*/
+            /*perspective-origin: 50% 50%;*/
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            transform: rotateX(45deg) perspective(1000px);
+            /*transform: translateZ(-100px);*/
+            /*transform: scaleZ(2);*/
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="div1">div</div>
+</div>
+</body>
+</html>
