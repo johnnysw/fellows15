@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<img src="img/1.jpg" alt="" id="pic">-->
+
+<script>
+    (function(){
+        var oImg = new Image();
+        oImg.onload = function(){
+//            console.log(oImg.offsetWidth);
+            loadSuccess();
+        };
+        oImg.src = "img/1.jpg";
+        /* window.onload = function(){
+             var oPic = document.getElementById("pic");
+             console.log(oPic.offsetWidth);
+         };*/
+
+       function loadSuccess(){
+           document.body.appendChild(oImg);
+       }
+
+
+
+
+
+
+
+    })();
+
+
+
+</script>
+
+
+</body>
+</html>
