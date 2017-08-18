@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<a href="http://www.baidu.com">baidu</a>-->
+    <button id="btn">随机数</button>
+    <div id="result"></div>
+
+    <script>
+        var oBtn = document.getElementById("btn");
+        var oResult = document.getElementById("result");
+        var obj = {};
+        oBtn.onclick = function(){
+            var result = [];
+            for(var i=0; i<5; i++){
+                result.push(Math.ceil(Math.random() * 10));
+            }
+            oResult.innerHTML = result;
+
+            history.pushState(result, "");
+        };
+        window.onpopstate = function(e){
+            oResult.innerHTML = e.state;
+        };
+
+
+
+
+    </script>
+
+
+</body>
+</html>
