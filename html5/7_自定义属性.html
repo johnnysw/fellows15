@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1" data-aa-bb="123"></div>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        var oDiv = document.getElementById("div1");
+        /*oDiv.aa = "123";
+        console.log(oDiv.aa);
+
+        oDiv.setAttribute("bb", "234");
+        console.log(oDiv.getAttribute("bb"));
+        $obj.prop("aa");*/
+
+//        console.log($("#div1").data("aa-bb"));
+        console.log(oDiv.dataset.aaBb);
+
+    </script>
+
+</body>
+</html>

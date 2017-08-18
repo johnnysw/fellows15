@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+json:javascript object notation
+json2.js
+-->
+
+    <script>
+        /*var obj = {
+            name : "zhangsan",
+            age : 18
+        };
+
+        var str = JSON.stringify(obj);//object => string
+        console.log(str);
+
+        var obj2 = JSON.parse(str);//string => object
+        console.log(obj2);*/
+
+        var a = 5;
+        var b = a;
+        a = 6;
+//        console.log(b);
+
+        var obj1 = {
+            name : "zhangsan",
+            age : 20,
+            father : {
+                name : "zhangbaba",
+                age : 50
+            }
+        };
+       /* var obj2 = obj1;
+        obj1.name = "lisi";
+        console.log(obj2.name);*/
+       /*var obj2 = new Object();
+       obj2.name = obj1.name;
+       obj2.age = obj2.age;
+
+       obj1.name = "lisi";
+       console.log(obj2.name);*/
+
+
+       var obj2 = clone(obj1);
+       obj1.father.name = "lisi";
+       console.log(obj2.father.name);
+       //深拷贝
+       function clone(obj){
+            var newObj = {};
+            for(var p in obj){
+                if(typeof obj[p] == "object"){
+                    newObj[p] = clone(obj[p]);
+                }else{
+                    newObj[p] = obj[p];
+                }
+            }
+            return newObj;
+       }
+
+
+       var str1 = JSON.stringify(obj1);
+       var obj3 = JSON.parse(str1);
+       obj1.father.name = "xx";
+       console.log(obj3);
+
+
+       eval("while(true){alert(123);}");
+//       JSON.parse("")
+
+
+    </script>
+
+
+
+</body>
+</html>
+
+<!--
+XML:
+<userinfo>
+    <name>zhangsan</name>
+    <age>18</age>
+    <school>黑大</school>
+</userinfo>
+
+Json:
+{"name":"zhangsan","age":18, "school": "heida"}
+
+
+-->

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul1">
+    <li>01</li>
+    <li class="aa">02</li>
+    <li class="aa">03</li>
+    <li>04</li>
+    <li>05</li>
+</ul>
+<div id="div1" class="bb">div</div>
+
+
+<script>
+    var oUl1 = document.getElementById("ul1");
+    var aLi = oUl1.getElementsByTagName("li")
+   /* console.log(aLi.constructor);
+    var arr = [1, 2, 3];
+    console.log(arr.constructor);*/
+   document.getElementsByClassName("aa");
+   document.getElementsByName("username");
+    /**
+     * 用来根据class查找元素
+     * @param className 要查找的class名称
+     * @param context 要搜索的范围
+     * @return {Array}
+     */
+    function getByClass(className, context) {
+        context = context || document;
+        if (context.getElementsByClassName) {
+            return context.getElementsByClassName(className);
+        } else {
+            var result = [];
+            var arr = context.getElementsByTagName('*');
+            for (var i = 0; i < arr.length; i++) {
+                //arr[i].className = "aa bb"
+                if (arr[i].className.indexOf(className) != -1) {
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+    }
+
+
+    var oUl = document.querySelector("#ul1 .aa");
+    console.log(oUl);
+
+    var aLis = document.querySelectorAll("#ul1 .aa")
+    console.log(aLis);
+
+
+//    console.log(document.getElementById("ul1"));
+
+
+    var oDiv1 = document.querySelector("#div1");
+    /*oDiv1.className += " cc ";*/
+//    console.log(typeof oDiv1.className);
+
+    console.log(oDiv1.classList.toggle("cc"));
+
+</script>
+</body>
+</html>
