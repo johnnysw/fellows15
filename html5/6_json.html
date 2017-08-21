@@ -54,7 +54,7 @@ json2.js
             var newObj = {};
             for(var p in obj){
                 if(typeof obj[p] == "object"){
-                    newObj[p] = clone(obj[p]);
+                    newObj[p] = arguments.callee(obj[p]);
                 }else{
                     newObj[p] = obj[p];
                 }
