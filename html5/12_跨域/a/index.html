@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.a.com</title>
+</head>
+<body>
+www.a.com
+<button id="btn">请求</button>
+<img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1059486618,1562064036&fm=26&gp=0.jpg" alt="">
+
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    /*$(function(){
+        $("#btn").on("click", function(){
+            $.get("http://www.b.com/index.html");
+        });
+    });*/
+
+//    var name = "zhangsan";
+
+
+    function fn(data){
+        alert("hello " + data);
+    }
+
+</script>
+
+<script src="http://www.b.com/index1.php?name='zhangsan'&callback=fn"></script>
+
+</body>
+</html>
