@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">加载js</button>
+
+    <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function(){
+            var oScript = document.createElement("script");
+            oScript.src = "hello.js";
+            document.body.appendChild(oScript);
+        };
+    </script>
+</body>
+</html>
+
+<!--
+async
+defer
+
+requirejs:AMD(asynchronization module define异步模块定义)
+seajs:CMD(common module define通用模块定义)
+
+CMD 推崇依赖就近，AMD 推崇依赖前置
+
+
+-->
+
+
+
+
