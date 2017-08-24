@@ -1,0 +1,207 @@
+#header{
+    height: 1.02rem;/* 1rem = 1*50px */
+    background: #06c1ae;
+    line-height: 1.02rem;
+    display: -webkit-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+#city{
+    width: 1.2rem;
+    background: url(../img/downarrow.png) no-repeat 0.9rem center;
+    -webkit-background-size: 0.32rem 0.32rem;
+    background-size: 0.32rem 0.32rem;
+    color: #fff;
+    margin: 0 0.2rem;
+}
+#mine{
+    color: #fff;
+    width: 0.6rem;
+    margin: 0 0.2rem;
+}
+#search{
+    -webkit-box-flex: 1;
+}
+#search input{
+    width: 100%;
+    height: 0.64rem;
+    -webkit-border-radius: 0.06rem;
+    -moz-border-radius: 0.06rem;
+    border-radius: 0.06rem;
+    outline: none;
+    border: 0;
+    background: #05a494 url(../img/magnify.png) no-repeat 0.1rem center;
+    -webkit-background-size: 0.32rem 0.32rem;
+    background-size: 0.32rem 0.32rem;
+    text-indent: 0.5rem;
+    color: #fff;
+}
+#search input::-webkit-input-placeholder{/* 伪元素选择器 */
+    color: #fff;
+    opacity: .8;
+}
+#banner{
+    height: 1rem;
+    background: #f0efed url(../img/banner.jpg) no-repeat center;
+    -webkit-background-size:12.8rem 2rem;
+    background-size: 6.4rem 1rem;
+    margin-top: 1.02rem;
+}
+
+#guide{
+    width: 100%;
+    height: 3.6rem;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+}
+#guide ul{
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 1s ease;
+}
+#guide img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+#guide li{
+    text-align: center;
+    width: 10%;
+    float: left;
+    margin-top: 0.2rem;
+}
+#nav{
+    position: absolute;
+    bottom: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#nav span{
+    width: 0.16rem;
+    height: 0.16rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    background-color: #f0efee;
+    margin-right: 0.2rem;
+}
+#nav span.active{
+    background-color: #06c1ae;
+}
+
+#activity{
+    display: -webkit-box;
+    text-align: center;
+    margin: 0.3rem 0;
+    background-color: #fff;
+}
+#activity div{
+    -webkit-box-flex: 1;
+}
+#activity img{
+    width: 1.24rem;
+    height: 1.24rem;
+}
+#activity .friend{
+    color: #55a40f;
+}
+#activity .low-price{
+    color: #ff3f0d;
+}
+#activity .quick-meal{
+    color: #f84fa7;
+}
+#activity h3{
+    margin: 0.2rem 0;
+}
+
+#guess{
+    background: #ffffff;
+    padding: 0 0.2rem;
+}
+#guess h3{
+    color: #333;
+    font-size: .34rem;
+    border-bottom: 1px solid #ccc;
+    padding: 0.2rem 0;
+}
+#menu .brand{
+    width: 1.8rem;
+    height: 1.8rem;
+    float: left;
+}
+#menu li{
+    height: 1.8rem;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #ccc;
+}
+#menu .detail{
+    float: left;
+    margin-left: 0.3rem;
+}
+#menu .detail-name{
+    font-size: .3rem;
+    font-weight: 400;
+    padding: 0.1rem 0;
+}
+#menu .price{
+    font-size:.38rem;
+    color: #06c1ae;
+}
+#menu .detail-desc{
+    margin-bottom: 0.2rem;
+}
+#menu .sold{
+    margin-left: 0.6rem;
+}
+#footer{
+    width: 100%;
+    height: 1rem;
+    padding: 0.2rem 0;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    bottom: 0;
+    display: -webkit-box;
+}
+#footer .logo{
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.2rem;
+}
+#footer img, #footer div, #footer button{
+    -webkit-box-flex: 1;
+}
+#footer p{
+    color: #fff;
+    margin-left:0.3rem;
+}
+#footer .download{
+    width: 1.2rem;
+    height: 0.7rem;
+    background-color: transparent;
+    border: 1px solid #06c1ae;
+    color: #06c1ae;
+    padding: 0;
+    text-shadow: none;
+    margin-right: 0.3rem;
+    font-size: .28rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+

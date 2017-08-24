@@ -1,0 +1,332 @@
+#header{
+    height: 1.02rem;/* 1rem = 1*50px */
+    background: #06c1ae;
+    line-height: 1.02rem;
+    display: -webkit-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+#left{
+    width: 1.2rem;
+}
+#left img{
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-top: 0.3rem;
+}
+#collect{
+    color: #fff;
+    width: 1.4rem;
+}
+#group{
+    -webkit-box-flex: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 0.36rem;
+}
+#banner{
+    background: url(../img/banner-xianyuxian.jpg) no-repeat center;
+    width: 100%;
+    height: 4.5rem;
+    margin-top:1.02rem;
+    background-size: cover;
+}
+#banner p{
+    color: #fff;
+}
+#banner{
+    position: relative;
+}
+#banner .product-name{
+    position: absolute;
+    bottom: 0.3rem;
+    left: 0.2rem;
+}
+#banner .product-name p:first-child{
+    font-size: 0.38rem;
+    margin-bottom: 0.15rem;
+}
+
+#price{
+    padding: 0.28rem 0.2rem;
+    border-bottom: 1px solid #ccc;
+}
+#price .buy{
+    width: 2.52rem;
+    height: 0.8rem;
+    background-color: #ff9900;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 0.1rem;
+    font-size: 0.4rem;
+    /*margin-left: 1.2rem;*/
+    float: right;
+}
+#price .preferential-price{
+    color: #06c1ae;
+    font-weight: bolder;
+}
+#price .preferential-price span{
+    font-size: 0.66rem;
+}
+
+#explain{
+    margin-bottom: 0.3rem;
+    padding: 0.28rem 0.2rem;
+}
+#explain span{
+    float: left;
+}
+#explain .refund{
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0.4rem 0.4rem;
+    padding-left: 0.5rem;
+}
+#explain span:nth-child(1){
+    background-image: url(../img/refund.png);
+    color: #6dbe03;
+}
+#explain span:nth-child(2){
+    background-image: url(../img/right.png);
+    color: #6dbe03;
+    margin-left: 1rem;
+}
+#explain span:last-child{
+    background-image: url(../img/sold.png);
+    padding-left: 0.5rem;
+    margin-top: 0.1rem;
+}
+
+#star{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.1rem;
+}
+#star img{
+    width: 0.32rem;
+    height: 0.32rem;
+}
+#evaluate-type{
+    margin: 0.3rem 0;
+    padding: 0.28rem 0.2rem;
+}
+#star .score{
+    color: #ff9712;
+}
+#star .evaluate-num{
+    float: right;
+    margin-right: 0.2rem;
+}
+#type span{
+    color: #999;
+    border: 1px solid #999;
+    padding: 0.1rem;
+    float: left;
+    margin-top: 0.2rem;
+    margin-right: 0.2rem;
+    border-radius: 0.1rem;
+}
+#type span.hot{
+    color: #ff9712;
+    border: 1px solid #ff9712;
+}
+#inform{
+    margin-top: 0.3rem;
+}
+#inform h3{
+    padding-bottom: 0.3rem;
+}
+#inform p{
+    color: #eb8706;
+    border-top: 1px solid #ccc;
+    padding-top: 0.3rem;
+}
+
+#merchant{
+    padding: 0 0.2rem;
+}
+#merchant .info{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.2rem;
+}
+#merchant .contact{
+    padding: 0.2rem 0;
+    display: -webkit-box;
+    border-bottom: 1px solid #ccc;
+}
+#merchant .name{
+    font-size: .32rem;
+    font-weight: bolder;
+}
+#merchant .position{
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.1rem 0;
+}
+#merchant .address{
+    -webkit-box-flex: 1;
+}
+#merchant .phone{
+    width: 1.4rem;
+    height: 1.2rem;
+    background: url(../img/phone.png) no-repeat center;
+    background-size: 0.38rem 0.38rem;
+    border-left: 1px solid #ccc;
+}
+#merchant .nearest{
+    background: url(../img/position.png) no-repeat left center;
+    background-size: 0.28rem 0.28rem;
+    padding-left: 0.4rem;
+    color: #EB8706;
+}
+.check{
+    color: #06c1ae;
+    padding: 0.2rem 0;
+    background: url(../img/rightarrow-blue.png) no-repeat right center;
+    -webkit-background-size: 0.38rem 0.38rem;
+    background-size: 0.38rem 0.38rem;
+}
+#combo{
+    padding: 0 0.2rem;
+}
+#combo h3{
+    border-bottom: 1px solid #ccc;
+    padding: 0.2rem 0;
+}
+#combo .discount-coupon{
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    display: -webkit-box;
+}
+#combo .discount-coupon li{
+    -webkit-box-flex: 1;
+    border-right: 1px solid #ccc;
+    padding: 0.22rem 0;
+    text-indent: 0.1rem;
+}
+#combo .discount-coupon li:last-child{
+    border-right: 0;
+}
+#combo .price{
+    border-bottom: 1px solid #ccc;
+    padding: 0.3rem 0.4rem;
+}
+#combo .price li{
+    list-style: disc;
+    margin-top: 0.1rem;
+}
+#notice{
+    padding: 0 0.2rem;
+}
+#notice h3{
+    border-bottom: 1px solid #ccc;
+    padding: 0.2rem 0;
+}
+#notice dt{
+    color: #ff9c08;
+    margin-top: 0.2rem;
+}
+#notice dd{
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+}
+#notice ul{
+    padding-left: 0.4rem;
+}
+#notice li{
+    list-style: disc;
+    margin-top: 0.1rem;
+}
+
+#evaluate{
+    padding: 0 0.2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.4rem;
+}
+#evaluate .evaluate-title{
+    height: 0.7rem;
+    border-bottom: 1px solid #ccc;
+}
+#evaluate .evaluate-title .star img{
+    width: 0.32rem;
+    height: 0.32rem;
+}
+#evaluate h3{
+    float: left;
+}
+#evaluate .star{
+    float: right;
+}
+#evaluate .item{
+    padding-top: 0.2rem;
+    border-bottom: 1px solid #ccc;
+}
+#evaluate .item-title .header{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+#evaluate .item-title .header img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+#evaluate .item-title .desc{
+    float: left;
+    margin-top: 0.05rem;
+    margin-left: 0.3rem;
+}
+#evaluate .item-title .name{
+    font-size: 0.24rem;
+    color: #666;
+    margin-bottom: 0.05rem;
+}
+#evaluate .item-title .desc img{
+    width: 0.28rem;
+    height: 0.28rem;
+}
+#evaluate .item-title .date{
+    font-size: .24rem;
+    margin-left: 0.2rem;
+}
+#evaluate .item-content{
+    clear: both;
+    line-height: 1.5;
+    padding-top: 0.2rem;
+}
+#evaluate .item-img{
+    margin: 0.2rem 0;
+}
+#evaluate .item-img img{
+    width: 1.1rem;
+    height: 1.1rem;
+    float: left;
+    margin-right: 0.1rem;
+}
+#evaluate .earnest{
+    width: 1rem;
+    height: 1rem;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

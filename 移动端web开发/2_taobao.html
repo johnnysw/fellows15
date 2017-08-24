@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPc(){
+        if(navigator.userAgent.indexOf("iPhone") != -1){
+            return false;
+        }
+        return true;
+    }
+    if(isPc()){
+        location.href = "http://www.taobao.com";
+    }else{
+        location.href = "http://m.taobao.com";
+    }
+
+
+
+
+</script>
+</body>
+</html>

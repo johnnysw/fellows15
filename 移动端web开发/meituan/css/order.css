@@ -1,0 +1,56 @@
+#header{
+    height: 1.02rem;/* 1rem = 1*50px */
+    background: #06c1ae;
+    line-height: 1.02rem;
+    display: -webkit-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+#left{
+    width: 1.2rem;
+}
+#left img{
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-top: 0.3rem;
+}
+#group{
+    -webkit-box-flex: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 0.36rem;
+}
+#content{
+    margin-top: 1.02rem;
+}
+#title{
+    margin: .6rem .2rem .2rem;
+    font-size: .34rem;
+}
+.order-form{
+    height: 0.9rem;
+    font-size: .3rem;
+    padding: 0 .2rem;
+    line-height: 0.9rem;
+    border-bottom: 1px solid #ccc;
+}
+.order-form span{
+    float:right;
+}
+#num{
+    float:right;
+}
+#num div{
+    float: left;
+}
+.order-form div button{
+    width: .6rem;
+    height: .6rem;
+    float: left;
+}
+.order-form div input{
+    width: 1rem;
+}
