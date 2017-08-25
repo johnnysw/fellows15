@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+    <!--<link rel="stylesheet" href="mytheme.min.css">-->
+    <!--<link rel="stylesheet" href="jquery.mobile.icons.min.css">-->
+    <script src="jquery-1.11.2.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+
+        <div data-role="header" data-position="fixed">
+            <a href="#anylink" data-role="button" data-icon="search">搜索</a>
+            <h1>page1</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <p>我是一名移动开发者！</p>
+            <a href="2_page2.html" data-transition="slide">跳转到page2</a>
+            <a href="#" data-shadow="true" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-bottom ui-corner-all">Left</a>
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#" data-role="button">按钮 1</a>
+                <a href="#" data-role="button">按钮 2</a>
+                <a href="#" data-role="button">按钮 3</a>
+            </div>
+            <div data-role="collapsible" data-collapsed="false">
+                <h1>点击我 - 我可以折叠！</h1>
+                <p>现在我默认是展开的。</p>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><span>Some Text</span></div>
+                <div class="ui-block-b"><span>Some Text</span></div>
+            </div>
+            <ol data-role="listview">
+                <li><a href="#">列表项</a></li>
+                <li><a href="#">列表项</a></li>
+                <li><a href="#">列表项</a></li>
+            </ol>
+            <label for="slider2">Flip switch:</label>
+            <select name="slider2" id="slider2" data-role="slider">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+            </select>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>页脚文本</h1>
+        </div>
+
+    </div>
+</body>
+</html>
