@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        ul{
+            width: 390px;
+        }
+        li{
+            list-style: none;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+            margin-top: 10px;
+            border-right: 1px solid #000;
+            padding-right: 20px;
+        }
+        li:nth-child(3n),li:last-child{
+            border-right: none;
+        }
+    </style>
 </head>
 <body>
-
+    <ul>
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+        <li>006</li>
+        <li>007</li>
+    </ul>
 </body>
 </html>

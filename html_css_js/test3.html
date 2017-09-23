@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" autocomplete="on">
+    <input type="text" required=required name="fname" autofocus="autofocus">
+    <input type="submit">
+</form>
+<script src="a.js" async defer></script>
+<script src="b.js" async defer></script>
+<script src="c.js" async defer></script>
+<script>
+//zetop.js
+
+//    console.log(a);
+//    var a = 5;
+//
+//    function fn(){
+//        var b;
+//        console.log(b);
+//        b = 10;
+//    }
+//var fn;
+//    fn();
+////    console.log(b);
+//     fn = function(){
+//        console.log(11111);
+//    }
+    //变量提升
+
+
+//    function User(){
+//        this.xx = 'zs';
+//    }
+////    User.prototype.xx = {
+//        aa:'111',
+//        bb:'222'
+//    };
+//    User.prototype.say = function(){
+//        console.log(this.xx);
+//    }
+//    var u = new User();
+//    u.say();
+//    u.xx.aa = 'lisi';
+//    u.say();
+//
+//    var u1 = new User();
+//    u1.say();
+//
+//    function Son(xx){
+//        this.xx = xx;
+//    }
+//
+//    Son.prototype = u;
+//    var s = new Son('lisi');
+//    s.say();
+
+
+    var obj = {
+        name:'zs',
+        age:37,
+        son:{
+            name:'lisi',
+            age:3
+        }
+    }
+
+    function fn(obj){
+        var newObj = {}
+        for(var p in obj){
+            if(typeof obj[p] == 'object'){
+                newObj[p] = arguments.callee(obj[p]);
+            }else{
+                newObj[p] = obj[p];
+            }
+        }
+        return newObj;
+    }
+
+    var oo = fn(obj);
+    oo.son.name = 'aaa';
+    console.log(obj.son.name);
+
+    function f(){
+        console.log(arguments[0]);
+    }
+    f(1,2,3);
+
+ amd
+
+ cmd
+
+
+
+
+
+//
+//    var str = JSON.stringify(obj);
+//    var oo = JSON.parse(str);
+//    oo.name = 'lisi';
+//    console.log(obj.name);
+
+
+//    var oo = obj;
+//    oo.name = 'lisi';
+//    console.log(obj);
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
