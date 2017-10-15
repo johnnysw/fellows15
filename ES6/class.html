@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //class
+
+//    function User(){
+//        this.aa = 'zs'
+//    }
+//    User.prototype.say = function(){
+//        console.log(this.aa);
+//    }
+//
+//    var u1 = new User();
+//    u1.say();
+//
+//    function Son(){
+//
+//    }
+//
+//    Son.prototype = u1;
+//
+//    var s = new Son();
+//    s.say();
+//    u1.aa.name = 'lisi';
+//    u1.say();
+//    var u2 = new User();
+//    u2.say();
+    //static
+    class User{
+        constructor(aa){
+            this.aa = aa;
+        }
+        static say(){
+//            console.log(this.aa);
+            console.log(111111);
+        }
+    }
+//    var u = new User('zs');
+    //    u.say();
+
+    User.say();
+
+//
+//    class Son extends User{
+//        constructor(aa,bb){
+//            super(aa);
+//            this.bb = bb
+//        }
+//        say(){
+//            console.log(this.bb);
+//        }
+//    }
+//
+//
+//    var s = new Son('zss','lisi');
+//    s.say();
+
+
+</script>
+</html>
