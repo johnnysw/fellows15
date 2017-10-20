@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <ul id="ul1"></ul>
+</body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    //  ajax
+
+//    $('#btn').on('click',function(){
+//        var ul = $('#ul1');
+//        $.post('product-data.json',{
+//
+//        },function(res){
+//            for(var i=0;i<res.productData.length;i++){
+//                var $li = $(`<li>${res.productData[i].productId}</li>`);
+//                ul.append($li);
+//            }
+//        },'json');
+//    });
+
+    // 创建对象
+//    var xmlhttp;
+//    if (window.XMLHttpRequest)
+//    {// code for IE7+, Firefox, Chrome, Opera, Safari
+//        xmlhttp=new XMLHttpRequest();
+//    }
+//    else
+//    {// code for IE6, IE5
+//        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+//    }
+//    //向服务器发送请求
+//
+//    xmlhttp.open("GET","test1.txt",true);
+//    xmlhttp.send();
+//
+//    //服务器响应
+//
+//    xmlDoc=xmlhttp.responseXML;
+//    txt="";
+//    x=xmlDoc.getElementsByTagName("ARTIST");
+//    for (i=0;i<x.length;i++)
+//    {
+//        txt=txt + x[i].childNodes[0].nodeValue + "<br />";
+//    }
+//    document.getElementById("myDiv").innerHTML=txt;
+//
+
+
+//    promise
+
+    // 省 市 县 乡镇
+//
+//    $.get('',{},function(res){
+//        .....
+//
+//        $.get('',{省的id},function(){
+//                .....
+//        });
+//
+//    });
+
+
+//promise
+
+
+
+//    var p = new Promise(function (resolve,reject) {
+//        $.get('product-data.json',{
+//
+//        },function(res){
+//            if(res.productData.length > 0){
+//                resolve(res.productData);
+//            }else{
+//                reject(55555);
+//            }
+//        },'json');
+//
+//    });
+//    var ul = $('#ul1');
+//    p.then((data)=>{
+//
+//    });
+//
+//    console.log(4444);
+
+//    var p = new Promise(function (resolve,reject) {
+//        console.log(22222);
+//        resolve(333333);
+//        reject(888888);
+//    });
+//    p.then((data)=>{
+//        console.log(data);
+//    },(data)=>{
+//        console.log(data);
+//    }).then((data)=>{
+//        console.log(data);
+//    });
+//
+
+//    $.get();
+//    $.get();
+//    $.get();
+
+//    var num=0;
+//    $.get('',{},function () {
+//        num++;
+//    })
+//
+//
+//    setInterval(function(){
+//        if(num){
+//
+//        }
+//    },50);
+
+    var p1 = new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                reject(111111);
+            },1000);
+        });
+    var p2 = new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                resolve(22222);
+            },200);
+    });
+    var p3 = new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                console.log(4444444);
+                reject(333333);
+            },2000);
+    });
+//
+//    Promise.all([p1,p2,p3])
+//        .then(function(data){
+//            console.log(data);
+//        },function(data){
+//            console.log(data);
+//        })
+
+
+    Promise.race([p1,p2,p3])
+            .then(function(data){
+                console.log(data);
+            },function(data){
+                console.log(data);
+            })
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
