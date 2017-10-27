@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #app{
+            width: 300px;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+        }
+        li{
+            list-style: none;
+            height: 30px;
+            margin: 10px;
+            padding: 10px;
+            line-height: 30px;
+        }
+        span{
+            float: right;
+        }
+        .red{
+            background: red;
+        }
+        .green{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>services</h1>
+        <ul>
+            <!--<li v-for="(obj,index) in arr" @click="change(obj)"-->
+            <li v-for="(obj,index) in arr" @click="obj.active = !obj.active"
+                :class="{red:obj.active,green:!obj.active}">
+                {{obj.name}}
+                <span v-text="obj.price"></span>
+            </li>
+        </ul>
+        <hr/>
+        total: <span>{{total()}}</span>
+    </div>
+</body>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            arr:[
+                {name:'aaa',price:232,active:false},
+                {name:'bbb',price:224,active:false},
+                {name:'ccc',price:678,active:false},
+                {name:'ddd',price:221,active:false},
+                {name:'eee',price:433,active:false}
+            ]
+        },
+        methods:{
+            change(obj){
+//                obj.active = !obj.active;
+//                this.bgColor = !this.bgColor;
+            },
+            total(){
+                let num = 0;
+                this.arr.forEach(function(val,index){
+                    if(val.active){
+                        num += val.price;
+                    }
+                })
+//                this.sum = num;
+                return num;
+            }
+        }
+    });
+
+
+
+
+</script>
+</html>
