@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+
         .red{
             width: 200px;
             height: 200px;
-            background: red;
         }
     </style>
 </head>
 <body>
     <div id="app">
         <button @click="fn">click</button>
-        <div :class="{red:isRed}"></div>
+        <!--<div :class="{red:isRed}"></div>-->
+        <div class='red' :style="{background:bgColor}"></div>
+
     </div>
 </body>
 <script src="vue.js"></script>
@@ -23,11 +25,17 @@
     new Vue({
         el:'#app',
         data:{
-            isRed:true
+            isRed:true,
+            bgColor:'red'
         },
         methods:{
             fn(){
-                this.isRed = !this.isRed;
+//                this.isRed = !this.isRed;
+                if(this.bgColor == 'red'){
+                    this.bgColor = '';
+                }else{
+                    this.bgColor = 'red';
+                }
             }
         }
     })
