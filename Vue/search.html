@@ -11,10 +11,10 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="msg">
+        <input type="text" v-model="msg" @keyup="search">
         <button @click="add">add</button>
         <ul>
-            <li v-for="val in arr" :class="{red:val.active}"
+            <li v-for="val in showArr" :class="{red:val.active}"
                 @click="val.active = !val.active">
                 {{val.name}}
             </li>
@@ -27,7 +27,8 @@
         el:'#app',
         data:{
             arr:[],
-            msg:''
+            msg:'',
+            showArr:[]
         },
         methods:{
             add(){
@@ -36,6 +37,13 @@
                 this.arr.sort((a,b)=>{
                     return a.name > b.name;
                 });
+                this.showArr = this.arr;
+            },
+            search(){
+                var filterArr = this.arr.filter((val)=>{
+                    return val.name.includes(this.msg);
+                });
+                this.showArr = filterArr;
             }
         }
     })
