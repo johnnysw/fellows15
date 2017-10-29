@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        {{firstName}} + {{lastName}} = {{fullName}}
+        {{fullName}}
+        {{fullName}}
+        {{fullName}}
+    </div>
+</body>
+<script src="vue.js"></script>
+<script>
+    //计算属性
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            firstName:'zhang',
+            lastName:'san'
+        },
+        computed:{
+            fullName:{
+                get:function(){
+                    return this.firstName + " "+ this.lastName;
+                },
+                set:function(val){
+                    console.log(val);
+                }
+            }
+        }
+    });
+
+    vm.$watch('firstName',function(val,oldVal){
+        if( val > 5){
+            this.firstName = oldVal;
+        }
+    });
+</script>
+</html>
