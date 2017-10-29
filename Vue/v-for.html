@@ -18,11 +18,20 @@
             <!--</li>-->
         <!--</ul>-->
 
-        <template v-for="n in 3">
-            <p>pppppp</p>
-            <h1>hhhhhh</h1>
-            <span>sssssss</span>
-        </template>
+        <ul>
+            <!--<li v-for="(val,aa,bb) in obj">-->
+                <!--{{val}},{{aa}},{{bb}}-->
+            <!--</li>-->
+            <li v-for="val in arr">
+                {{val}}
+            </li>
+        </ul>
+
+        <!--<template v-for="n in 3">-->
+            <!--<p>pppppp</p>-->
+            <!--<h1>hhhhhh</h1>-->
+            <!--<span>sssssss</span>-->
+        <!--</template>-->
 
     </div>
 </body>
@@ -30,10 +39,15 @@
 <script>
 
 
-    new Vue({
+    var vm = new Vue({
         el:'#app',
         data:{
-            arr:[1,2,3]
+            arr:[1,2,3],
+            obj:{
+                a:1,
+                b:2,
+                c:3
+            }
         }
     })
 
