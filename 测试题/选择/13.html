@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+</body>
+<script>
+
+    var name = 'world';
+    (function() {
+        var name;
+        if(typeof name==='undefined'){
+            name = 'jack';
+            console.log('goodbye' + name);
+        }else{
+            console.log('hello' + name);
+        }
+    })();
+
+
+
+</script>
+</html>

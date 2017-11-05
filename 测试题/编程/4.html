@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    var str = 'this b compu1er is a computers';
+    var arr = str.split(' ');
+
+    var max = arr[0];
+    var min = arr[0];
+
+    for(var i=1;i<arr.length;i++){
+        if(arr[i].length > max.length){
+            max = arr[i];
+        }
+        if(arr[i].length < min.length){
+            min = arr[i];
+        }
+    }
+//    arr.sort(function(a,b){
+//        return a.length - b.length;
+//    });
+//
+    console.log(min,max);
+
+</script>
+</html>

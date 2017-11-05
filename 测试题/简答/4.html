@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1" style="width: 400px;height: 400px;background: #00b51d;">
+        <div style="width: 200px;height: 200px;background: #000;"></div>
+    </div>
+</body>
+
+<script>
+    document.getElementById('div1').onclick = function(e){
+        console.log(e.target);
+        console.log(e.currentTarget);
+    }
+
+</script>
+
+</html>
