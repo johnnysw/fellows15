@@ -6,6 +6,7 @@ const glob = require('glob');
 const purifycssWebpack = require("purifycss-webpack");
 const webpack =  require('webpack');
 const entry = require('./webpack-config/entry_webpack');
+const copyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry:entry,
     output:{
@@ -82,12 +83,29 @@ module.exports = {
             // Give paths to parse for rules. These should be absolute!
             paths: glob.sync(path.join(__dirname, 'src/*.html')),
         }),
-        new webpack.BannerPlugin("成哥所有")
+        new webpack.BannerPlugin("成哥所有"),
+        new webpack.ProvidePlugin({
+            $:"jquery"
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name:["jquery","vue"],
+            filename:"assent/[name].js",
+            minChunks:2
+        }),
+        new copyWebpackPlugin([{
+            from:__dirname+'/src/public',
+            to:'./public'
+        }])
     ],
     devServer:{
         contentBase: path.resolve(__dirname,'dist'),
         host:'127.0.0.1',
         port:'8081',
         compress:true
+    },
+    watchOptions:{
+        poll:1000,
+        aggregeateTimeout:500,
+        ignored:/node_modules/
     }
 }
