@@ -17,7 +17,7 @@ module.exports = {
                 // use:['style-loader','css-loader']
                 // use:[
                 //     {
-                //         loader:'style-loader'
+                //         loader:'style-loader',
                 //     },
                 //     {
                 //         loader:'css-loader'
@@ -25,7 +25,13 @@ module.exports = {
                 // ]
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    use: "css-loader"
+                    use: [
+                        {
+                            loader:"css-loader",
+                            options:{importLoaders:1}
+                        },
+                        "postcss-loader"
+                    ]
                 })
             },
             {
@@ -39,6 +45,14 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test:/\.scss$/,
+                // use:['style-loader','css-loader','sass-loader']
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: ["css-loader","sass-loader"]
+                })
             }
         ]
     },

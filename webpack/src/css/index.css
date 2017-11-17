@@ -6,3 +6,9 @@
     height: 300px;
     background: url("../img/1.jpg") no-repeat;
 }
+
+#div3{
+    transform: translate(-50%,-50%);
+    transition: all 1s ease;
+    box-shadow: #00A5FF;
+}
