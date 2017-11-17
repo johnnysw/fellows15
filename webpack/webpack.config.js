@@ -4,10 +4,10 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const Uglify = require('uglifyjs-webpack-plugin');
 const glob = require('glob');
 const purifycssWebpack = require("purifycss-webpack");
+const webpack =  require('webpack');
+const entry = require('./webpack-config/entry_webpack');
 module.exports = {
-    entry:{
-        entry: "./src/index.js"
-    },
+    entry:entry,
     output:{
         path:path.resolve(__dirname,'dist'),
         filename: '[name].js'
@@ -81,7 +81,8 @@ module.exports = {
         new purifycssWebpack({
             // Give paths to parse for rules. These should be absolute!
             paths: glob.sync(path.join(__dirname, 'src/*.html')),
-        })
+        }),
+        new webpack.BannerPlugin("成哥所有")
     ],
     devServer:{
         contentBase: path.resolve(__dirname,'dist'),
