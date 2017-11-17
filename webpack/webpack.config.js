@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const Uglify = require('uglifyjs-webpack-plugin');
+const glob = require('glob');
+const purifycssWebpack = require("purifycss-webpack");
 module.exports = {
     entry:{
         entry: "./src/index.js"
@@ -53,6 +55,16 @@ module.exports = {
                     fallback: "style-loader",
                     use: ["css-loader","sass-loader"]
                 })
+            },
+            {
+                test:/\.js$/,
+                use:{
+                    loader:"babel-loader",
+                    options:{
+                        presets:['env']
+                    }
+                },
+                exclude:/node_modules/
             }
         ]
     },
@@ -66,6 +78,10 @@ module.exports = {
         }),
         new ExtractTextPlugin('css/index.css'),
         // new Uglify()
+        new purifycssWebpack({
+            // Give paths to parse for rules. These should be absolute!
+            paths: glob.sync(path.join(__dirname, 'src/*.html')),
+        })
     ],
     devServer:{
         contentBase: path.resolve(__dirname,'dist'),
