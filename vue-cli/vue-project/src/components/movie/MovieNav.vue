@@ -1,28 +1,27 @@
 <template>
-  <div class='footer'>
+  <div class='nav'>
       <ul>
-          <li>电影</li>
-          <li>音乐</li>
-          <li>书籍</li>
-          <li>图片</li>
+          <li>top250</li>
+          <li>正在热映</li>
+          <li>即将上映</li>
       </ul>
   </div>
 </template>
 <script>
     
 </script>
-<style>
-   .footer{
+<style scoped>
+   .nav{
        height    : 1rem;
        background: rgb(33, 150, 243);
        position  : fixed;
-       bottom    : 0;
+       top       : 1rem;
        width     : 100%;
    }
-   .footer ul{
+   .nav ul{
        display: flex;
    }
-   .footer li{
+   .nav li{
        flex       : 1;
        text-align : center;
        color      : #fff;
