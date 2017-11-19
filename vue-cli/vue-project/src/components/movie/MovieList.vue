@@ -4,13 +4,25 @@
         <img src="../../assets/logo.png" alt="">
     </div>
     <div class="movie-title">
-        <span>放大放大</span>
-        <p>发达范德萨发生打发</p>
+        <span>{{title}}</span>
+        <p>
+           <span v-for="d in desc">
+               {{d}}
+           </span> 
+            ({{year}})(平均{{avg}}分)
+        </p>
     </div>
   </div>
 </template>
 <script>
-    
+     export default {
+        props: ['title','desc','year','avg'],
+        data () {
+            return {
+                
+            }
+        }
+    }
 </script>
 <style scoped>
     .movie-list{
