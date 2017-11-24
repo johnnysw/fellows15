@@ -1,6 +1,6 @@
 <template>
   <div class='movie'>
-      <common-header></common-header>
+      <common-header title="movie" bgColor="rgb(33, 150, 243)"></common-header>
       <movie-nav></movie-nav>
       <div class='list-box'>
         <movie-list v-for="(obj,index) in movieList" :key="index" :title="obj.nm"

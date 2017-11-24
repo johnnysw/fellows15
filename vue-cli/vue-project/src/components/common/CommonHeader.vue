@@ -1,20 +1,21 @@
 <template>
-  <div class='header'>
+  <div class='header' :style="{background:bgColor}">
       <button>首页</button>
-      <h2>movie</h2>
+      <h2>{{title}}</h2>
   </div>
 </template>
 <script>
-    
+     export default {
+         props: ['title','bgColor']
+     }
 </script>
 <style>
     .header{
-        height    : 1rem;
-        background: rgb(33, 150, 243);
-        display   : flex;
-        position  : fixed;
-        top       : 0;
-        width     : 100%;
+        height  : 1rem;
+        display : flex;
+        position: fixed;
+        top     : 0;
+        width   : 100%;
     }
     .header button{
         width : 1rem;
