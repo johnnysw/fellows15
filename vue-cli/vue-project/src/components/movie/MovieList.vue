@@ -1,7 +1,7 @@
 <template>
   <div class='movie-list'>
     <div class="movie-img">
-        <img src="../../assets/logo.png" alt="">
+        <img :src="img" alt="">
     </div>
     <div class="movie-title">
         <span>{{title}}</span>
@@ -16,7 +16,7 @@
 </template>
 <script>
      export default {
-        props: ['title','desc','year','avg'],
+        props: ['title','desc','year','avg','img'],
         data () {
             return {
                 
