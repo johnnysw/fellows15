@@ -6,8 +6,8 @@
     <div class="movie-title">
         <span>{{title}}</span>
         <p>
-           <span v-for="d in desc">
-               {{d}}
+           <span>
+               {{desc}}
            </span> 
             ({{year}})(平均{{avg}}分)
         </p>
