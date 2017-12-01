@@ -1,6 +1,6 @@
 <template>
   <div class="book">
-      <common-header title="book" bgColor="rgb(121, 85, 72)"></common-header>
+      <common-header title="book" nav="<" bgColor="rgb(121, 85, 72)"></common-header>
       <common-footer bgColor="rgb(121, 85, 72)"></common-footer>
   </div>
 </template>
