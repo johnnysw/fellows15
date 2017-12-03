@@ -1,9 +1,9 @@
 <template>
   <div>
        <common-header title="photo" nav="<" bgColor="rgb(63, 81, 181)"></common-header>
-        <div class='detail' :style="{'background-image':bg}" v-if="isShow">
+        <v-touch class='detail' @swiperight="prev" @swipeleft="next" :style="{'background-image':bg}">
             
-        </div>
+        </v-touch>
   </div>
 </template>
 <script>
@@ -14,8 +14,7 @@ export default {
     data(){
         return {
             aa       : this.$route.params.index,
-            photoData: [],
-            isShow   : false,
+            photoData: this.$store.state.photoData,
         }
     },
     computed:{
@@ -23,13 +22,22 @@ export default {
             return `url(${this.photoData[this.aa].src})`
         }
     },
-   mounted(){
-      Axios.get('/static/photo-data.json')
-      .then(res=>{
-        this.photoData = res.data.photoData;
-        this.isShow    = true;
-      });
-  },
+    methods:{
+        next(){
+            if(this.aa == this.photoData.length - 1){
+                this.aa = 0;
+            }else{
+                this.aa++;
+            }
+        },
+        prev(){
+            if(this.aa == 0){
+                this.aa = this.photoData.length - 1;
+            }else{
+                this.aa--;
+            }
+        }
+    },
   components:{
       CommonHeader
   }

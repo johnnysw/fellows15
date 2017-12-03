@@ -14,18 +14,25 @@
 <script>
 import CommonHeader from "../common/CommonHeader"
 import CommonFooter from "../common/CommonFooter"
+import {mapState,mapActions} from 'vuex';
+
 import Axios from 'axios'
 export default {
   data(){
     return {
-      photoData: []
     }
   },
   mounted(){
       Axios.get('/static/photo-data.json')
       .then(res=>{
-        this.photoData = res.data.photoData;
+        this.changeData(res.data.photoData);
       });
+  },
+  computed:{
+    ...mapState(['photoData'])
+  },
+  methods:{
+    ...mapActions(['changeData'])
   },
   components:{
       CommonHeader,
