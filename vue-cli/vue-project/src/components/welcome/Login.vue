@@ -20,6 +20,7 @@ import CommonHeader from "../common/CommonHeader"
 import CommonFooter from "../common/CommonFooter"
 
 import Axios from 'axios'
+Axios.defaults.withCredentials = true;
 export default {
   data(){
     return {
@@ -32,7 +33,7 @@ export default {
   },
   methods:{
     login(){
-      Axios.get('http://127.0.0.1:80/myblog/welcome/vue_login',{
+      Axios.get('http://127.0.0.1:3000/users/vue_login',{
         params:{
           username: this.username,
           pwd     : this.pwd
@@ -40,6 +41,7 @@ export default {
       })
       .then(res=>{
          location.href = 'http://127.0.0.1:8080/#/index';
+        // console.log(res.data);
       });
       
     }

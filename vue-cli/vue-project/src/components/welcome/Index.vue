@@ -22,10 +22,9 @@ export default {
     }
   },
   mounted(){
-      Axios.get('http://127.0.0.1:80/myblog/welcome/vue_index')
+      Axios.get('http://127.0.0.1:3000/users/vue_index')
       .then(res=>{
-        console.log(res.data);
-        this.username = res.data.username;
+        this.username = JSON.parse(res.data).username;
       });
       
   },
