@@ -11,7 +11,7 @@ require("./assets/js/rem.js");
 require("./assets/css/reset.css");
 global.API_PROXY = 'https://bird.ioliu.cn/v1/?url='
 
-Vue.use(VueTouch,{name:'v-touch'})
+Vue.use(VueTouch,{'name':'v-touch'});
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

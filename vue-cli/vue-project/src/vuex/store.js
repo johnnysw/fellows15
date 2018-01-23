@@ -33,7 +33,7 @@ const actions={
     reduceAction({commit}){
         commit('reduce');
     },
-    changeData({commit},data){
+    setPhotoData({commit},data){
         commit('setPhotoData',data);
     }
 }

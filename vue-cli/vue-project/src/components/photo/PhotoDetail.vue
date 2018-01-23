@@ -1,57 +1,47 @@
 <template>
-  <div>
+  <div class='detail'>
        <common-header title="photo" nav="<" bgColor="rgb(63, 81, 181)"></common-header>
-        <v-touch class='detail' @swiperight="prev" @swipeleft="next" :style="{'background-image':bg}">
-            
+        <v-touch class='photo-detail' :style="{background:bg}" 
+        @swipeleft="left" @swiperight="right">
         </v-touch>
   </div>
 </template>
 <script>
 import CommonHeader from "../common/CommonHeader"
+import {mapState} from 'vuex';
 import Axios from 'axios'
 
 export default {
     data(){
-        return {
-            aa       : this.$route.params.index,
-            photoData: this.$store.state.photoData,
-        }
+      return {
+          aa: this.$route.params.index,
+        //   photoData: this.$store.state.photoData
+      }  
     },
-    computed:{
+    computed: {
         bg(){
-            return `url(${this.photoData[this.aa].src})`
-        }
+            return "url("+ this.$store.state.photoData[this.aa].src +") no-repeat center / contain #000"
+        },
+        ...mapState(["photoData"])
     },
     methods:{
-        next(){
-            if(this.aa == this.photoData.length - 1){
-                this.aa = 0;
-            }else{
-                this.aa++;
-            }
+        left(){
+            this.aa++;
         },
-        prev(){
-            if(this.aa == 0){
-                this.aa = this.photoData.length - 1;
-            }else{
-                this.aa--;
-            }
+        right(){
+            this.aa--;
         }
     },
-  components:{
+  components: {
       CommonHeader
   }
 }
 </script>
 <style>
-    .detail{
-        position           : absolute;
-        top                : 1rem;
-        bottom             : 0;
-        width              : 100%;
-        background-repeat  : no-repeat;
-        background-size    : contain;
-        background-position: center;
-        background-color   : #000;
+    .photo-detail{
+        position: absolute;
+        top     : 1rem;
+        bottom  : 0;
+        width   : 100%;
     }
 </style>
